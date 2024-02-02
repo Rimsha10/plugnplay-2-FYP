@@ -11,6 +11,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+<!--  Header Section Starts Here-->
     <header>
         <nav class="navbar">
             <span class="hamburger-btn material-symbols-rounded">menu</span>
@@ -21,15 +22,14 @@
             <ul class="links">
                 <span class="close-btn material-symbols-rounded">close</span>
                 <li><a href="#">Home</a></li>
-            
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
             <button class="login-btn">LOG IN</button>
         </nav>
     </header>
+
     <div class="form-box login">
-    
             <h2>Welcome To Service Swift</h2>
             <p>Aiming to serve all OEMS with a chatbox framework solution so they can enhance their customer service </p>
         </div>
@@ -42,22 +42,22 @@
                 <h2>Welcome Back</h2>
                 <p>Please log in using your personal information to stay connected with us.</p>
             </div>
+            <!--  Form for Login and Sign Up -->
             <div class="form-content">
                 <h2>LOGIN</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Email</label>
+                <form action="plugnplay.html">
+                    <div class="input-field email">
+                        <input type="email" id="email"  title="Please provide a valid email address" required>
+                        <label for="email">Enter your email</label>
                     </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Password</label>
+                    <div class="input-field password">
+                        <input type="password" id="password"   minlength="6" maxlength="6" title="Please provide a valid 6 character long password"required>
+                        <label for="password">Enter password</label>
+                        <i id="pass-toggle-btn" class="fa-solid fa-eye"></i>
+
                     </div>
                     <a href="#" class="forgot-pass-link">Forgot password?</a>
-                  
-                   <a href="plugnplay.html">Log In</a>
-
-          
+        <button type="submit">Login</button>    
                 </form>
                 <div class="bottom-link">
                     Don't have an account?
@@ -65,6 +65,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="form-box signup">
             <div class="form-details">
                 <h2>Create Account</h2>
@@ -72,23 +74,27 @@
             </div>
             <div class="form-content">
                 <h2>SIGNUP</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Enter your email</label>
+                <form action="plugnplay.html">
+                 <div class="input-field">
+                        <input type="text" id="username" required>
+                        <label for="username">Enter username</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" required>
-                        <label>Create password</label>
+                        <input type="text" id="email1" pattern="/^[^ ]+@[^ ]+\.[a-z]{2,3}$/" required>
+                        <label for="email1">Enter your email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+                        <label for="password1">Create password</label>
                     </div>
                     <div class="policy-text">
-                        <input type="checkbox" id="policy">
+                        <input type="checkbox" id="policy" required>
                         <label for="policy">
                             I agree the
                             <a href="#" class="option">Terms & Conditions</a>
                         </label>
                     </div>
-                    <a href="plugnplay.html">Sign Up</a>
+                    <button type="submit">Sign Up</button>
                 </form>
                 <div class="bottom-link">
                     Already have an account? 
